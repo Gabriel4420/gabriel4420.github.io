@@ -26,3 +26,48 @@
   });
 
 })(jQuery); // End of use strict
+const body = document.querySelector("body")
+const checkbox = document.querySelector("input#customSwitch1")
+
+const getStyle = (element, style) => 
+    window
+        .getComputedStyle(element)
+        .getPropertyValue(style)
+
+
+const initialColors = {
+    bg: getStyle(body, "--bg"),
+    colorHeadings: getStyle(body, "--color-headings","#343a40"),
+    colorText: getStyle(body, "--color-text"),
+}
+
+const darkMode = {
+    bg: "#333333",
+    colorHeadings: "#f2f2f2",
+    colorText: "#B5B5B5",
+    
+      
+    
+}
+
+const transformKey = key => 
+    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+
+const changeColors = (colors) => {
+    Object.keys(colors).map(key => 
+        body.style.setProperty(transformKey(key), colors[key]) 
+    )
+}
+
+
+checkbox.addEventListener("change", ({target}) => {
+    if(target.checked){
+      changeColors(darkMode)
+      
+    }else {
+      changeColors(initialColors)
+    } 
+
+    
+})
