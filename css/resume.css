@@ -142,6 +142,11 @@ p.lead {
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
+
+  .custom-control.custom-switch{
+    position: relative;
+    right: 10px;
+  }
 }
 
 section.resume-section {
@@ -161,12 +166,22 @@ section.resume-section .resume-item .resume-date {
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
+
+  .custom-control.custom-switch{
+    position: relative;
+    right: 100px;
+  }
 }
 
 @media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+  }
+
+  .custom-control.custom-switch{
+    position: relative;
+    right: 10px;
   }
 }
 
@@ -221,5 +236,11 @@ a:hover, a:focus, a:active {
 
 #react-icon i:hover{
   color: rgb(0, 89, 255);
+}
+
+.custom-control.custom-switch{
+  float: right;
+  position: relative;
+  right: 200px;
 }
 
