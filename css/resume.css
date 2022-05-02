@@ -155,11 +155,11 @@ section.resume-section {
   max-width: 65rem;
 }
 
-section.resume-section #education {
+/* section.resume-section #education {
    padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 
-}
+} */
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
